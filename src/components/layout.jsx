@@ -1,16 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-
+import { GlobalStyle } from "@styles"
 import { Loader } from "@components"
 
-const Layout = ({ children }) => (
-  <div id="root">
-    {/* TODO: Add meatdata, site google keys, favicon, title etc. */}
-    {/* <Head />  */}
+const Layout = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true)
 
-    <Loader />
-  </div>
-)
+  return (
+    <div id="root">
+      {/* TODO: Add metadata, site google keys, favicon, title etc. */}
+      {/* <Head />  */}
+
+      <GlobalStyle />
+      <Loader finishLoading={() => setIsLoading(false)} />
+    </div>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
