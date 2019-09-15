@@ -1,7 +1,18 @@
 import React from "react"
+import { Layout } from "@components"
+import styled from "styled-components"
+import { Main, mixins } from "@styles"
 
-import Layout from "../components/layout"
+const Container = styled(Main)`
+  ${mixins.sidePadding};
+`
 
-const IndexPage = () => <Layout />
+const IndexPage = () => (
+  <Layout>
+    <Container>
+      <h1>Jordy Guntur</h1>
+    </Container>
+  </Layout>
+)
 
 export default IndexPage

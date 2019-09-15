@@ -1,8 +1,9 @@
 import GlobalStyle from './GlobalStyle';
+import Main from './Main';
 import media from './media';
-import theme from './theme';
 import mixins from './mixins';
+import theme from './theme';
 
 export {
-  GlobalStyle, media, mixins, theme,
+  GlobalStyle, Main, media, mixins, theme,
 };

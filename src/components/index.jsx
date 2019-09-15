@@ -1,3 +1,5 @@
 import Loader from "./loader"
+import Layout from "./layout"
+import Head from "./head"
 
-export { Loader }
+export { Layout, Loader, Head }

@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       {isLoading ? (
         <Loader finishLoading={() => setIsLoading(false)} />
       ) : (
-        <div className="container"></div>
+        <div className="container">{children}</div>
       )}
     </div>
   )
