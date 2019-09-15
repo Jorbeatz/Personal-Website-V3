@@ -12,7 +12,12 @@ const Layout = ({ children }) => {
       {/* <Head />  */}
 
       <GlobalStyle />
-      <Loader finishLoading={() => setIsLoading(false)} />
+
+      {isLoading ? (
+        <Loader finishLoading={() => setIsLoading(false)} />
+      ) : (
+        <div className="container"></div>
+      )}
     </div>
   )
 }
