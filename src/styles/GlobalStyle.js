@@ -82,6 +82,12 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
 
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   body {
     margin: 0;
     width: 100%;
@@ -89,7 +95,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: ${colors.deepestPurple};
+    background-color: ${colors.dark};
     color: ${colors.slate};
     line-height: 1.3;
     font-family: ${fonts.FiraSans};
@@ -112,6 +118,111 @@ const GlobalStyle = createGlobalStyle`
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: ${theme.transition};
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: ${colors.tron};
+      outline: 0;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+
+    &:focus,
+    &:active {
+      outline-color: ${colors.tron};
+    }
+  }
+
+  input, textarea {
+    border-radius: 0;
+    outline: 0;
+
+    &:focus {
+      outline: 0;
+    }
+    &::placeholder {
+    }
+    &:focus,
+    &:active {
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  p {
+    margin: 0 0 15px 0;
+  }
+
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .gatsby-image-outer-wrapper {
+    height: 100%;
+  }
+
+  .fadeup-enter {
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
+  }
+
+  .fadeup-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
+  }
+
+  .fadedown-enter {
+    opacity: 0.01;
+    transform: translateY(-20px);
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
+  }
+
+  .fadedown-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms ${theme.easing}, transform 300ms ${theme.easing};
+  }
+
+  .fade-enter {
+    opacity: 0.01;
+    transition: opacity 1000ms ${theme.easing};
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ${theme.easing};
   }
 `;
 

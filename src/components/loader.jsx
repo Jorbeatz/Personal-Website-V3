@@ -7,7 +7,7 @@ const { colors } = theme
 
 const LoaderContainer = styled.div`
   ${mixins.flexCenter};
-  background-color: ${colors.dark};
+  background-color: ${colors.darker};
   position: fixed;
   width: 100%;
   height: 100%;
@@ -27,7 +27,7 @@ const LogoWrapper = styled.div`
 const Loader = ({ finishLoading }) => {
   //TODO: This will be the animation function for the logo
   const animate = () => {
-    const timeout = setTimeout(() => finishLoading(), 3000)
+    const timeout = setTimeout(() => finishLoading(), 1000)
   }
 
   const [isLoaderDisplayed, setIsLoaderDisplayed] = useState(false)
@@ -41,9 +41,7 @@ const Loader = ({ finishLoading }) => {
   return (
     <LoaderContainer>
       <Helmet bodyAttributes={{ class: `hidden` }} />
-      <LogoWrapper isLoaderDisplayed={isLoaderDisplayed}>
-        <p>Welcome.</p>
-      </LogoWrapper>
+      <LogoWrapper isLoaderDisplayed={isLoaderDisplayed}></LogoWrapper>
     </LoaderContainer>
   )
 }
