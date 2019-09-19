@@ -2,8 +2,8 @@ const theme = {
   colors: {
     dark: '#09001e',
     darker: '#060015',
-    tron: '#6FC3DF',
-    tronLight: '#6fc3df40',
+    tron: '#9491ff',
+    tronLight: '#9491ff44',
     slate: '#8892b0',
     lightSlate: '#a8b2d1',
     lightestSlate: '#ccd6f6',
