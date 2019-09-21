@@ -45,7 +45,6 @@ const Subtitle = styled.h3`
   ${media.phone`font-size: 40px;`};
 `
 const Summary = styled.div`
-  font-family: ${fonts.Roboto};
   margin-top: 25px;
   width: 50%;
   max-width: 600px;
