@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
 import { theme, mixins, media, Section } from "@styles"
+import ResumePDF from "../content/resume.pdf"
 const { colors, fontSizes, fonts } = theme
 
 const HeroContainer = styled(Section)`
@@ -15,7 +17,6 @@ const HeroContainer = styled(Section)`
     width: 100%;
   }
 `
-
 const Hi = styled.h1`
   color: ${colors.tron};
   margin: 0 0 20px 3px;
@@ -58,6 +59,7 @@ const Resume = styled.a`
 `
 
 const Hero = ({ data }) => {
+  const { frontmatter, html } = data[0].node
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -65,22 +67,30 @@ const Hero = ({ data }) => {
     return () => clearTimeout(timer)
   })
 
-  const one = <Hi style={{ transitionDelay: "100ms" }}>Hi, my name is</Hi>
-  const two = <Name style={{ transitionDelay: "200ms" }}>Jordy Guntur.</Name>
+  const one = <Hi style={{ transitionDelay: "100ms" }}>{frontmatter.title}</Hi>
+  const two = (
+    <Name style={{ transitionDelay: "200ms" }}>{frontmatter.name}</Name>
+  )
   const three = (
     <Subtitle style={{ transitionDelay: "300ms" }}>
-      Developing for the web.
+      {frontmatter.subtitle}
     </Subtitle>
   )
   const four = (
-    <Summary style={{ transitionDelay: "400ms" }}>
-      Software engineer located in New York City, passionate about designing and
-      developing top-tier web applications.
-    </Summary>
+    <Summary
+      style={{ transitionDelay: "400ms" }}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   )
   const five = () => (
     <div style={{ transitionDelay: "500ms" }}>
-      <Resume>Contact Me</Resume>
+      <Resume
+        href={ResumePDF}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        Resume
+      </Resume>
     </div>
   )
 

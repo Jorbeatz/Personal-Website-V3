@@ -1,34 +1,59 @@
+const config = require('./src/config');
+
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
-    description:
-      "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
-    author: "@gatsbyjs",
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
+    description: config.siteDescription,
+    author: '@jorbeatz',
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-offline',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
+        name: 'content',
+        path: `${__dirname}/src/content/`,
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-transformer-remark',
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
-        start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
-        display: "minimal-ui",
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1100,
+              quality: 90,
+              linkImagesToOriginal: true,
+            },
+          },
+        ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'JordyGuntur',
+        short_name: 'JordyGuntur',
+        start_url: '/',
+        background_color: config.darker,
+        theme_color: config.tron,
+        display: 'minimal-ui',
+      },
+    },
   ],
-}
+};
