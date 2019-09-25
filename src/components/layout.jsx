@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { GlobalStyle } from "@styles"
-import { Loader } from "@components"
+import { Footer, Loader } from "@components"
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       ) : (
         <div className="container">{children}</div>
       )}
+      <Footer />
     </div>
   )
 }

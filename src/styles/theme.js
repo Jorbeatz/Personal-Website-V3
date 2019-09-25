@@ -1,9 +1,11 @@
 const theme = {
   colors: {
+    black: '#000000',
     dark: '#09001e',
     darker: '#060015',
     tron: '#9491ff',
     tronLight: '#9491ff44',
+    tronDarker: '#9491ff14',
     slate: '#8892b0',
     lightSlate: '#a8b2d1',
     lightestSlate: '#ccd6f6',

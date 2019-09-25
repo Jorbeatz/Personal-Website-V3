@@ -6,3 +6,5 @@ resume: "resume"
 ---
 
 Software engineer located in New York City, passionate about designing and developing top-tier web applications.
+
+[Site Under Construction]
