@@ -8,17 +8,20 @@ import config from "@config"
 
 const Head = ({ metadata }) => (
   <Helmet>
-    <html lang="en">
-      <title itemProp="name" lang="en">
-        {metadata.title}
-      </title>
-      <meta name="description" content={metadata.description} />
-      <meta name="keywords" content={config.siteKeywords} />
-      <link
-        href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
-        rel="stylesheet"
-      ></link>
-    </html>
+    <html lang="en" />
+    <title itemProp="name" lang="en">
+      {metadata.title}
+    </title>
+    <meta name="description" content={metadata.description} />
+    <meta name="keywords" content={config.siteKeywords} />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    ></link>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
   </Helmet>
 )
 

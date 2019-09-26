@@ -58,9 +58,9 @@ const mixins = {
       content: "";
       display: block;
       width: 0;
-      height: 1px;
+      height: 1.5px;
       position: relative;
-      bottom: 0.37em;
+      bottom: 0.2em;
       background-color: ${colors.tron};
       transition: ${theme.transition};
       opacity: 0.5;

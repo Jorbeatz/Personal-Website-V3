@@ -3,6 +3,8 @@ const theme = {
     black: '#000000',
     dark: '#09001e',
     darker: '#060015',
+    darkGrey: '#333f58',
+    mediumGrey: '#2d3952',
     tron: '#9491ff',
     tronLight: '#9491ff44',
     tronDarker: '#9491ff14',
@@ -16,6 +18,7 @@ const theme = {
     FiraSans:
       'Fira Sans, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif',
     Roboto: 'Roboto, Lucida Console, Monaco, monospace',
+    Lato: 'Lato, Roboto, Lucida Console, Monaco, monospace',
   },
 
   fontSizes: {

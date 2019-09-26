@@ -97,9 +97,9 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: ${colors.dark};
     color: ${colors.slate};
-    line-height: 1.3;
+    line-height: 1.4;
     font-family: ${fonts.FiraSans};
-    font-size: ${fontSizes.xlarge};
+    font-size: ${fontSizes.large};
     ${media.phablet`font-size: ${fontSizes.large};`}
   }
 

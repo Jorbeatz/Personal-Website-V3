@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
@@ -20,14 +19,14 @@ const HeroContainer = styled(Section)`
 const Hi = styled.h1`
   color: ${colors.tron};
   margin: 0 0 20px 3px;
-  font-size: ${fontSizes.medium};
+  font-size: ${fontSizes.small};
   font-family: "Menlo";
   font-weight: normal;
   ${media.desktop`font-size: ${fontSizes.small};`};
   ${media.tablet`font-size: ${fontSizes.smallish};`};
 `
 const Name = styled.h2`
-  font-size: 80px;
+  font-size: 70px;
   line-height: 1.1;
   margin: 0;
   ${media.desktop`font-size: 70px;`};
@@ -36,10 +35,11 @@ const Name = styled.h2`
   ${media.phone`font-size: 40px;`};
 `
 const Subtitle = styled.h3`
-  font-size: 80px;
+  font-size: 70px;
   line-height: 1.1;
   color: ${colors.slate};
-  ${media.desktop`font-size: 70px;`};
+  ${media.bigDesktop`font-size: 65px;`};
+  ${media.desktop`font-size: 60px;`};
   ${media.tablet`font-size: 60px;`};
   ${media.phablet`font-size: 50px;`};
   ${media.phone`font-size: 40px;`};
@@ -48,6 +48,7 @@ const Summary = styled.div`
   margin-top: 25px;
   width: 50%;
   max-width: 600px;
+  font-family: "Lato";
   a {
     ${mixins.inlineLink};
   }
@@ -109,7 +110,7 @@ const Hero = ({ data }) => {
   )
 }
 
-Hero.PropTypes = {
+Hero.propTypes = {
   data: PropTypes.array.isRequired,
 }
 
