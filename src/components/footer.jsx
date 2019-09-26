@@ -72,11 +72,11 @@ const Footer = () => {
       </SocialContainer>
       <Copy>
         <GithubLink
-          href="https://github.com/jordyguntur/Personal-Website-V3"
+          href="https://github.com/bchiang7"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          <div>Designed &amp; Developed by Jordy Guntur</div>
+          <div>template attributed to brittany chiang</div>
         </GithubLink>
       </Copy>
     </FooterContainer>

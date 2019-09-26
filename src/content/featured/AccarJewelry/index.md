@@ -2,13 +2,12 @@
 date: "1"
 title: "Accar Jewelry Redesign"
 cover: "./accar.png"
-github: "https://github.com/bchiang7/halcyon-site"
-external: "https://halcyon-theme.netlify.com/"
+github: "https://github.com/jordyguntur/accar-jewelry-redesign"
 tech:
   - Sketch
-  - Wireframing
-  - Prototyping
+  - Design
+  - High Fidelity
 show: "true"
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode), [Package Control](https://packagecontrol.io/packages/Halcyon%20Theme), [Atom Package Manager](https://atom.io/themes/halcyon-syntax), and [npm](https://www.npmjs.com/package/hyper-halcyon-theme).
+New website design for watch company based in Florida. Same pages and functionality but revamped for a more modern, clean and fluid look. Designed with [Sketch](https://www.sketch.com).

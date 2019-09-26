@@ -47,7 +47,8 @@ const ProjectDescription = styled.div`
   padding: 25px;
   background-color: #170634;
   color: ${colors.lightSlate};
-  font-size: ${fontSizes.large};
+  font-size: ${fontSizes.medium};
+  font-family: ${fonts.Lato};
   border-radius: ${theme.borderRadius};
   ${media.thone`
     background-color: transparent;
@@ -206,7 +207,7 @@ const Featured = ({ data }) => {
 
   return (
     <FeaturedContainer id="projects">
-      <Heading ref={revealTitle}>Some Projects</Heading>
+      <Heading ref={revealTitle}>Recent Projects</Heading>
 
       <div>
         {featuredProjects &&
