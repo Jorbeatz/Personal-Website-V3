@@ -3,6 +3,7 @@ date: "1"
 title: "Accar Jewelry Redesign"
 cover: "./accar.png"
 github: "https://github.com/jordyguntur/accar-jewelry-redesign"
+external: "https://github.com/jordyguntur/accar-jewelry-redesign"
 tech:
   - Sketch
   - Design
