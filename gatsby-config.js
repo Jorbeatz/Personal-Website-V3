@@ -5,7 +5,7 @@ module.exports = {
     title: config.siteTitle,
     siteUrl: config.siteUrl,
     description: config.siteDescription,
-    author: '@jorbeatz',
+    author: '@jordyguntur',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

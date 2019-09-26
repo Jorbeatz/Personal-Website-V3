@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { About, Hero, Layout } from "@components"
+import { About, Featured, Hero, Jobs, Layout } from "@components"
 import styled from "styled-components"
 import { Main, mixins } from "@styles"
 
@@ -13,6 +13,8 @@ const IndexPage = ({ data }) => (
     <Container id="content">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Jobs data={data.jobs.edges} />
+      <Featured data={data.featured.edges} />
     </Container>
   </Layout>
 )
@@ -50,6 +52,51 @@ export const pageQuery = graphql`
               }
             }
             skills
+          }
+          html
+        }
+      }
+    }
+    jobs: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/jobs/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
+          }
+          html
+        }
+      }
+    }
+    featured: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/featured/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                fluid(
+                  maxWidth: 700
+                  quality: 90
+                  traceSVG: { color: "#64ffda" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            tech
+            github
+            external
+            show
           }
           html
         }
