@@ -34,8 +34,8 @@ npm start
 
 | Command       | Description                                           |
 | ------------- | ----------------------------------------------------- |
-| npm start     | Start webpack development server @ **localhost:5000** |
-| npm run build | Build production bundles to **./build** directory     |
+| npm start     | Start webpack development server @ **localhost:8000** |
+| npm run build | Build production bundles to **./public** directory     |
 | npm serve     | Preview site as it will look deployed                 |
 | npm format    | Run Prettier to format javascript files               |
 
