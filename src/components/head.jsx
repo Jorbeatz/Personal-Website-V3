@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import config from "@config"
+import favicon from "@images/favicons/favicon.ico"
 
 // TODO: Add favicon, OGP related tags, theme etc.
 // TODO: Pass in metadata information
@@ -12,6 +13,7 @@ const Head = ({ metadata }) => (
     <title itemProp="name" lang="en">
       {metadata.title}
     </title>
+    <link rel="shortcut icon" href={favicon} />
     <meta name="description" content={metadata.description} />
     <meta name="keywords" content={config.siteKeywords} />
     <link
