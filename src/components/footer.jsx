@@ -76,7 +76,7 @@ const Footer = () => {
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
-          <div>template by bchiang7</div>
+          <div>forked from bchiang7</div>
         </GithubLink>
       </Copy>
     </FooterContainer>
