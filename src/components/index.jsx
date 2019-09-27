@@ -1,4 +1,5 @@
 import About from "./about"
+import Contact from "./contact"
 import Email from "./email"
 import Featured from "./featured"
 import Footer from "./footer"
@@ -11,6 +12,7 @@ import Jobs from "./jobs"
 
 export {
   About,
+  Contact,
   Email,
   Featured,
   Footer,
