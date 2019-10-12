@@ -1,5 +1,5 @@
 ---
-date: "1"
+date: 2"
 title: "Accar Jewelry Redesign"
 cover: "./accar.png"
 github: "https://github.com/jordyguntur/accar-jewelry-redesign"

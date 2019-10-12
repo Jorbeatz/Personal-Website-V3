@@ -1,7 +1,7 @@
 ---
-date: "3"
+date: 3"
 title: "SneakVert"
-cover: "./poolit.png"
+cover: "./sneakvert.png"
 github: "https://github.com/jordyguntur/sneakvert"
 external: "https://sneakvertsociety.com/"
 tech:
