@@ -97,7 +97,7 @@ const AvatarContainer = styled.a`
     mix-blend-mode: screen;
   }
   &:after {
-    border: 2px solid ${colors.tronDarker};
+    border: 2px solid ${colors.tron};
     top: 20px;
     left: 20px;
     z-index: -1;
