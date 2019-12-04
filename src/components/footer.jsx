@@ -71,13 +71,7 @@ const Footer = () => {
         </SocialItemList>
       </SocialContainer>
       <Copy>
-        <GithubLink
-          href="https://github.com/bchiang7"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <div>forked from bchiang7</div>
-        </GithubLink>
+        
       </Copy>
     </FooterContainer>
   )
