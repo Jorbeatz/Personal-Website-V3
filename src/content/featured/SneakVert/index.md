@@ -1,5 +1,5 @@
 ---
-date: 3"
+date: "4"
 title: "SneakVert"
 cover: "./sneakvert.png"
 github: "https://github.com/jordyguntur/sneakvert"

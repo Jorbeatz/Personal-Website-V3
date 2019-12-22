@@ -1,5 +1,5 @@
 ---
-date: "5"
+date: "6"
 title: "Time Based Analytics"
 cover: "./time.png"
 github: "https://github.com/jordyguntur/time-based-analytics"
